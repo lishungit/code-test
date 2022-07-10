@@ -11,16 +11,6 @@ public class Direction {
     private static final String EAST = "EAST";
     private static final String WEST = "WEST";
 
-    public static void main(String[] args) {
-        final String[] dirSource = {"SOUTH", "NORTH", "NORTH", "EAST", "WEST"};
-        System.out.println("Solution before:");
-        Arrays.stream(dirSource).map(str -> str + ",").forEach(System.out::print);
-        System.out.println();
-        final String[] dirResult = solution(dirSource);
-        System.out.println("Solution after:");
-        Arrays.stream(dirResult).map(str -> str + ",").forEach(System.out::print);
-    }
-
     public static String[] solution(String[] dirs) {
         List<String> dirResult = new ArrayList<>();
         for (int i = 0; i < dirs.length - 1; i++) {
