@@ -10,6 +10,14 @@ public class LinkedList {
             this.id = id;
             this.next = next;
         }
+
+        public int getId() {
+            return id;
+        }
+
+        public Node getNext() {
+            return next;
+        }
     }
 
     public static Node reverse(Node head) {
@@ -20,18 +28,6 @@ public class LinkedList {
         head.next.next = head;
         head.next = null;
         return pre;
-    }
-
-    public static void print(Node node){
-        while (node != null) {
-            System.out.print(node.id);
-            node = node.next;
-            if (node != null) {
-                System.out.print("->");
-            } else {
-                System.out.println();
-            }
-        }
     }
 
 }
