@@ -1,0 +1,14 @@
+1, Grep out all of record for target keyword in files:
+get-content d:\apps\dove\log\dove* | select-string -Pattern 'deploy,react-em' > d:\apps\deploy-react-history.txt
+
+2, JAVA APP start with parameter
+d:\apps\java\jdk1.8.0_74\bin\java -XX:+PrintG -server
+java -jar /Users/shunli/dev_workspace/test-parent/test-web/target/test-web-1.0-SNAPSHOT.jar
+
+3, get process id and kill it
+# get PID
+sc queryex <service_name>
+# kill it
+taskkill /F /PID <service_pid>
+# delete service
+sc delete <service_name>
